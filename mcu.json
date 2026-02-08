@@ -1,0 +1,209 @@
+[
+  {
+    "id": 1,
+    "phase": "Phase One",
+    "title": "Iron Man",
+    "release_year": 2008,
+    "release_date": "2008-05-02",
+    "director": "Jon Favreau",
+    "notes": "Post-credits scene introduces Nick Fury and the Avengers Initiative."
+  },
+  {
+    "id": 2,
+    "phase": "Phase One",
+    "title": "The Incredible Hulk",
+    "release_year": 2008,
+    "release_date": "2008-06-13",
+    "director": "Louis Leterrier",
+    "notes": "Starring Edward Norton as Bruce Banner. Tony Stark cameo in post-credits."
+  },
+  {
+    "id": 3,
+    "phase": "Phase One",
+    "title": "Iron Man 2",
+    "release_year": 2010,
+    "release_date": "2010-05-07",
+    "director": "Jon Favreau",
+    "notes": "Introduces Black Widow. Post-credits shows Mjolnir in New Mexico."
+  },
+  {
+    "id": 4,
+    "phase": "Phase One",
+    "title": "Thor",
+    "release_year": 2011,
+    "release_date": "2011-05-06",
+    "director": "Kenneth Branagh",
+    "notes": "Introduces Loki and the Cosmic side of the MCU. Post-credits shows the Tesseract."
+  },
+  {
+    "id": 5,
+    "phase": "Phase One",
+    "title": "Captain America: The First Avenger",
+    "release_year": 2011,
+    "release_date": "2011-07-22",
+    "director": "Joe Johnston",
+    "notes": "Set primarily in WWII. Post-credits is the first Avengers teaser."
+  },
+  {
+    "id": 6,
+    "phase": "Phase One",
+    "title": "Marvel's The Avengers",
+    "release_year": 2012,
+    "release_date": "2012-05-04",
+    "director": "Joss Whedon",
+    "notes": "First team-up film. Mid-credits reveals Thanos. Post-credits is the shawarma scene."
+  },
+  {
+    "id": 7,
+    "phase": "Phase Two",
+    "title": "Iron Man 3",
+    "release_year": 2013,
+    "release_date": "2013-05-03",
+    "director": "Shane Black",
+    "notes": "Deals with Tony's PTSD from the Battle of New York. No traditional post-credits scene."
+  },
+  {
+    "id": 8,
+    "phase": "Phase Two",
+    "title": "Thor: The Dark World",
+    "release_year": 2013,
+    "release_date": "2013-11-08",
+    "director": "Alan Taylor",
+    "notes": "Introduces the Reality Stone (the Aether). Mid-credits scene introduces the Collector."
+  },
+  {
+    "id": 9,
+    "phase": "Phase Two",
+    "title": "Captain America: The Winter Soldier",
+    "release_year": 2014,
+    "release_date": "2014-04-04",
+    "director": "Anthony & Joe Russo",
+    "notes": "Political thriller that dismantles S.H.I.E.L.D. Introduces Falcon and Winter Soldier."
+  },
+  {
+    "id": 10,
+    "phase": "Phase Two",
+    "title": "Guardians of the Galaxy",
+    "release_year": 2014,
+    "release_date": "2014-08-01",
+    "director": "James Gunn",
+    "notes": "Major expansion of the Cosmic MCU. Introduces the Power Stone and the full Guardians team."
+  },
+  {
+    "id": 11,
+    "phase": "Phase Two",
+    "title": "Avengers: Age of Ultron",
+    "release_year": 2015,
+    "release_date": "2015-05-01",
+    "director": "Joss Whedon",
+    "notes": "Introduces Vision, Scarlet Witch, Quicksilver, and Ultron. Mid-credits shows Thanos with the Infinity Gauntlet."
+  },
+  {
+    "id": 12,
+    "phase": "Phase Two",
+    "title": "Ant-Man",
+    "release_year": 2015,
+    "release_date": "2015-07-17",
+    "director": "Peyton Reed",
+    "notes": "Introduces the Quantum Realm and the Pym Particle technology. Mid-credits shows the Wasp suit prototype."
+  },
+  {
+    "id": 13,
+    "phase": "Phase Three",
+    "title": "Captain America: Civil War",
+    "release_year": 2016,
+    "release_date": "2016-05-06",
+    "director": "Anthony & Joe Russo",
+    "notes": "Introduces Black Panther and Spider-Man to the MCU. The Avengers are divided by the Sokovia Accords."
+  },
+  {
+    "id": 14,
+    "phase": "Phase Three",
+    "title": "Doctor Strange",
+    "release_year": 2016,
+    "release_date": "2016-11-04",
+    "director": "Scott Derrickson",
+    "notes": "Introduces magic, the Multiverse, and the Time Stone (Eye of Agamotto). Mid-credits sets up Thor: Ragnarok."
+  },
+  {
+    "id": 15,
+    "phase": "Phase Three",
+    "title": "Guardians of the Galaxy Vol. 2",
+    "release_year": 2017,
+    "release_date": "2017-05-05",
+    "director": "James Gunn",
+    "notes": "Explores Peter Quill's parentage. Post-credits scenes introduce Adam Warlock's cocoon and the original Guardians."
+  },
+  {
+    "id": 16,
+    "phase": "Phase Three",
+    "title": "Spider-Man: Homecoming",
+    "release_year": 2017,
+    "release_date": "2017-07-07",
+    "director": "Jon Watts",
+    "notes": "First MCU Spider-Man solo film. Establishes Peter Parker's high school life and connection to Tony Stark."
+  },
+  {
+    "id": 17,
+    "phase": "Phase Three",
+    "title": "Thor: Ragnarok",
+    "release_year": 2017,
+    "release_date": "2017-11-03",
+    "director": "Taika Waititi",
+    "notes": "Revamps Thor's tone, destroys Asgard, and teams up Thor with Hulk. Post-credits leads directly into Infinity War."
+  },
+  {
+    "id": 18,
+    "phase": "Phase Three",
+    "title": "Black Panther",
+    "release_year": 2018,
+    "release_date": "2018-02-16",
+    "director": "Ryan Coogler",
+    "notes": "First MCU film to win an Academy Award. Introduces and explores the nation of Wakanda."
+  },
+  {
+    "id": 19,
+    "phase": "Phase Three",
+    "title": "Avengers: Infinity War",
+    "release_year": 2018,
+    "release_date": "2018-04-27",
+    "director": "Anthony & Joe Russo",
+    "notes": "Thanos collects the Infinity Stones and wipes out half of all life in the universe."
+  },
+  {
+    "id": 20,
+    "phase": "Phase Three",
+    "title": "Ant-Man and the Wasp",
+    "release_year": 2018,
+    "release_date": "2018-07-06",
+    "director": "Peyton Reed",
+    "notes": "Set before Infinity War. Explores the Quantum Realm further. Post-credits shows the snap's effect on the main cast."
+  },
+  {
+    "id": 21,
+    "phase": "Phase Three",
+    "title": "Captain Marvel",
+    "release_year": 2019,
+    "release_date": "2019-03-08",
+    "director": "Anna Boden & Ryan Fleck",
+    "notes": "Set in the 1990s, introduces Carol Danvers. Mid-credits scene leads directly into Endgame."
+  },
+  {
+    "id": 22,
+    "phase": "Phase Three",
+    "title": "Avengers: Endgame",
+    "release_year": 2019,
+    "release_date": "2019-04-26",
+    "director": "Anthony & Joe Russo",
+    "notes": "Conclusion of the Infinity Saga. Features time travel and the final battle against Thanos."
+  },
+  {
+    "id": 23,
+    "phase": "Phase Three",
+    "title": "Spider-Man: Far From Home",
+    "release_year": 2019,
+    "release_date": "2019-07-02",
+    "director": "Jon Watts",
+    "notes": "Epilogue to the Infinity Saga. Deals with the aftermath of the Blip and introduces Mysterio. Mid-credits reveals Spider-Man's identity to the world."
+  }
+]
