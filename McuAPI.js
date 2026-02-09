@@ -59,7 +59,7 @@ app.get("/mcu/films/:id", (req, res) => {
 });
 
 
-app.post("/mcu/films/:id", (req, res) => {
+app.put("/mcu/films/:id", (req, res) => {
     const id = parseInt(req.params.id);
     const film = mcu.find(film => film.id === id);
     const index = mcu.findIndex(film => film.id === id);
@@ -91,5 +91,5 @@ app.listen(PORT, () => {
   console.log(`GET endpoint: http://localhost:${PORT}/mcu/films`);
   console.log(`GET endpoint: http://localhost:${PORT}/mcu/films/:id`);
   console.log(`DELETE endpoint: http://localhost:${PORT}/mcu/films/:id`);
-  console.log(`POST endpoint: http://localhost:${PORT}/mcu/films/:id`);
+  console.log(`PUT endpoint: http://localhost:${PORT}/mcu/films/:id`);
 });
