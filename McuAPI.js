@@ -1,31 +1,25 @@
 const express = require("express");
 const fs = require("fs");
 
+// ----------------------------------
 // Initialize Express app
+// ----------------------------------
 const app = express();
 app.use(express.json());
 
 
-// Load data ONCE when server starts
-var mcu;
+// ----------------------------------
+// Load data when server starts
+// ----------------------------------
+const fileContent = fs.readFileSync("mcu.json", "utf8");
+const mcu = JSON.parse(fileContent);
 
-try {
-    const fileContent = fs.readFileSync("mcu.json", "utf8");
-    mcu = JSON.parse(fileContent);
-    console.log("mcu.json loaded successfully on startup");
-} catch (err) {
-    console.error("Failed to load mcu.json on startup:", err);
-    process.exit(1); // Exit if data can"t be loaded
-}
 
-//function validateFields(validFields, fields) {
-//    const invalidFields = fields.filter(field => !validFields.includes(field));
-//    return invalidFields.join(", ");
-//}
-
+// ----------------------------------
+// Some helper functions
+// ----------------------------------
 function updateFound(field) {
-    if (typeof field !== "undefined" && field !== "") return true;
-    return false;
+    return typeof field !== "undefined" && field !== "";
 }
 
 function updateFilm(current, updates) {
@@ -49,7 +43,9 @@ function updateFilm(current, updates) {
 }
 
 
+// ----------------------------------
 // Enable CORS for all routes
+// ----------------------------------
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -57,46 +53,53 @@ app.use((req, res, next) => {
 });
 
 
-// GET
+// ----------------------------------
+// Endpoints
+// ----------------------------------
 app.get("/mcu/films", (req, res) => {
-    res.json(mcu); // Express automatically sets Content-Type to application/json
+    return res.status(200).json(mcu);
 });
 
 
-// POST
+app.get("/mcu/films/:id", (req, res) => {
+    const id = parseInt(req.params.id);
+    const film = mcu.find(film => film.id === id);
+    if (!film) return res.sendStatus(404);
+    return res.status(200).json(film);
+});
+
+
 app.post("/mcu/films/:id", (req, res) => {
-    const updates = req.body;
-    const fields = Object.keys(updates);
-
-//    const validFields = ["id", "phase", "title", "release_year", "release_date", "director", "notes"];
-//    const invalidFields = validateFields(validFields, fields);
-//
-//    if (invalidFields) {
-//        return res.status(400).json({
-//          error: "invalid fields found: " + invalidFields
-//        });
-//    }
-
     const id = parseInt(req.params.id);
     const film = mcu.find(film => film.id === id);
     const index = mcu.findIndex(film => film.id === id);
 
-    if (!film) {
-        return res.status(404);
-    }
+    if (!film) return res.sendStatus(404);
 
-    const updatedFilm = updateFilm(film, updates);
+    const updatedFilm = updateFilm(film, req.body);
     mcu[index] = updatedFilm;
 
-    res.json(updatedFilm);
+    return res.status(200).json(updatedFilm);
 });
 
 
+app.delete("/mcu/films/:id", (req, res) => {
+    const id = parseInt(req.params.id);
+    const index = mcu.findIndex(film => film.id === id);
+    if (index === -1) return res.sendStatus(404);
+    mcu.splice(index, 1);
+    return res.sendStatus(200);
+});
 
+
+// ----------------------------------
 // Start server
+// ----------------------------------
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
   console.log(`GET endpoint: http://localhost:${PORT}/mcu/films`);
+  console.log(`GET endpoint: http://localhost:${PORT}/mcu/films/:id`);
+  console.log(`DELETE endpoint: http://localhost:${PORT}/mcu/films/:id`);
   console.log(`POST endpoint: http://localhost:${PORT}/mcu/films/:id`);
 });
